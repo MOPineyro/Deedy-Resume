@@ -1,0 +1,230 @@
+%!TEX program = xelatex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Manuel}{Pineyro}{ Full stack developer with a diverse skill set encompassing marketing, design, and development. \\ \vspace{\topsep} \urlstyle{same}\url{http://mopstateofmind.com} \\
+\href{mailto:manuel.o.pineyro@gmail.com}{manuel.o.pineyro@gmail.com} | 914.564.5325
+}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Columbia University}
+\descript{Major: Psychology \\ Minor: Business Management}
+\location{Graduation May 2012 | New York, NY}
+Dean's List
+\sectionsep
+
+\subsection{NYU}
+\descript{Interactive Telecommunications Program Camp 2012}
+\location{Completed July 2012 | New York, NY}
+Physical Computing | UX | Interactive Media
+\sectionsep
+
+\subsection{Epicodus}
+\descript{Web Development Bootcamp}
+\location{Graduation June 2014 | Portland, OR}
+Ruby | JavaScript | HTML | CSS
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Media \& Information Management \\
+\sectionsep
+
+\subsection{Undergraduate}
+Business of Software Development \\
+Intro to Computer Science \\
+Adv Computer Modeling \& Animation \\
+Statistical Reasoning \\
+Media, Culture, \& Society \\
+Cultural Psychology \\
+Marketing Management
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\descript{Programming}
+\location{Languages:}
+Ruby \textbullet{}   JavaScript \textbullet{} HTML \textbullet{} CSS \\
+\location{Frameworks:}
+Rails \textbullet{} Sinatra \textbullet{} Ember \textbullet{} Angular \\
+\location{Databases:}
+PostgreSQL \textbullet{} MySQL \textbullet{} Redis \\
+\descript{Design}
+\location{Adobe:}
+Photoshop \textbullet{} Illustrator \textbullet{} After Effects \\
+\location{Prototyping:}
+AxureRP \textbullet{} FramerJS \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/mopineyro}{\custombold{mopineyro}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/manuelopineyro}{\custombold{manuelopineyro}} \\
+Twitter://  \href{https://twitter.com/mopineyro}{\custombold{@mopineyro}}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Pick6}
+\descript{| Freelance Mobile App Design \& Development }
+\location{Nov 2014 - Dec 2014 | Portland, OR}
+\textit{Hybrid Mobile App} - fan engagement iOS application for minor league hockey team
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item UI modifications and style customization using Sass, Bourbon, and Neat.
+\item Ember.js front end feature additions including: online radio streaming capabilities, graphing of user points, and interactive gaming functionality.
+\item Fixes on back end Rails API to support authentication and newly added gamification features.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Bunker}
+\descript{| Contract Web Developer }
+\location{May 2014 – Dec 2014 | Beaverton, OR}
+\textit{Conference Page} - information and registration page for upcoming Ember.js conference.
+\begin{tightemize}
+\item Pixel-perfect comp to code reproduction of page design utilizing Sass, Bourbon mixin library, and Neat grid framework.
+\item Basic CMS integration using Middleman static site generator and a set of YAML files.
+\end{tightemize}
+\textit{Debt Collection App} - internal app for major debt collection agency based in the Pacific Northwest.
+\begin{tightemize}
+\item Modified Redis and Rails based API to allow for multiple simultaneous payments.
+\item JavaScript refactoring, validations, and bug fixing for a number of front end defects.
+\end{tightemize}
+\textit{Barge Weight Tracking App} - internal app for leading global barge inspection, verification, testing and certification company.
+\begin{tightemize}
+\item Using Rails, implemented an online version of company spreadsheet used for tracking, weighing, and calculating international barge shipments.
+\end{tightemize}
+\textit{UseMusic.org} - platform for digital music purchases where the proceeds go to a cause of the artist’s choice
+\begin{tightemize}
+\item Design and implementation of infinite scrolling and faceted search capabilities using Angular and Solr to increase ability to locate relevant song choices therefore maximizing donation potential
+\item Expanded unit tests using RSPec and Capybara to ensure continued integrity of app.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{VivaStreet}
+\descript{| Marketing Designer }
+\location{Aug 2012 – July 2013 | London, UK \& New York, NY}
+\begin{tightemize}
+\item Introduced Bootstrap based style guide allowing for the standardization of digital campaigns across multiple countries.
+\item Created responsive email templates based on Zurb Ink that resulted in increased conversions and reduced bounce rates.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{}
+\descript{Columbia Center on Global Brand Leadership | Design Intern}
+\location{Sep 2011 – June 2012 | New York, NY}
+\sectionsep
+
+\runsubsection{}
+\descript{Columbia Computer Graphics Group | Assistant}
+\location{Sep 2010 – May 2011 | New York, NY}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Interests}
+\textbullet{} Physical Computing \textbullet{} Interaction Design \textbullet{} Affective Computing \\ \textbullet{} Data Visualization  \textbullet{} Creative Coding \textbullet{} Computer Vision
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
